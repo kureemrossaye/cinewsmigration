@@ -1,0 +1,31 @@
+<item>
+
+	<title>$title</title>
+	<pubDate>$pubDate</pubDate>
+	<wp:post_id>$postId</wp:post_id>
+	<dc:creator><![CDATA[$creator]]></dc:creator>
+	<description></description>
+	<content:encoded><![CDATA[$content]]></content:encoded>
+	
+	<wp:post_date><![CDATA[$pubDate]]></wp:post_date>
+	<wp:post_date_gmt><![CDATA[$pubDate]]></wp:post_date_gmt>
+	<wp:comment_status><![CDATA[$commentStatus]]></wp:comment_status>
+	<wp:ping_status><![CDATA[$pingStatus]]></wp:ping_status>
+		
+		<wp:status><![CDATA[$postStatus]]></wp:status>
+		<wp:post_parent>$postParent</wp:post_parent>
+		<wp:menu_order>$postMenuOrder</wp:menu_order>
+		<wp:post_type><![CDATA[post]]></wp:post_type>
+		<%
+			for(def category in categories){
+		%>
+				<category ${category.niceName} > <![CDATA[${category.text}]]> </category>
+		<%
+			}
+		%>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_thumbnail_id]]></wp:meta_key>
+			<wp:meta_value><![CDATA[531]]></wp:meta_value>
+		</wp:postmeta>
+		
+	</item>
